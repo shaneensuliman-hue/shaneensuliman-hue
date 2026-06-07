@@ -16,29 +16,17 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             color: #333;
-            overflow-x: hidden;
         }
 
         header {
             background: rgba(255, 255, 255, 0.95);
-            padding: 20px 0;
+            padding: 20px;
+            text-align: center;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
         }
 
         .logo {
-            font-size: 28px;
+            font-size: 32px;
             font-weight: bold;
             background: linear-gradient(45deg, #667eea, #764ba2);
             -webkit-background-clip: text;
@@ -46,74 +34,44 @@
             background-clip: text;
         }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #667eea;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
 
         .hero {
-            max-width: 1200px;
-            margin: 60px auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            color: white;
+            text-align: center;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
+            gap: 30px;
             align-items: center;
-            padding: 0 20px;
         }
 
-        .hero-content {
-            color: white;
-        }
-
-        .hero-content h1 {
+        .hero-text h1 {
             font-size: 48px;
             margin-bottom: 20px;
-            animation: slideIn 0.8s ease;
         }
 
-        .hero-content p {
+        .hero-text p {
             font-size: 18px;
             line-height: 1.6;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             opacity: 0.95;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: white;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-            border: none;
-            font-size: 16px;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
         .hero-image {
             text-align: center;
         }
 
-        .hero-image svg {
+        .hero-image img {
             max-width: 100%;
             height: auto;
             animation: float 3s ease-in-out infinite;
@@ -125,96 +83,93 @@
             50% { transform: translateY(-20px); }
         }
 
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateX(-30px); }
-            to { opacity: 1; transform: translateX(0); }
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
         .menu-section {
-            max-width: 1200px;
-            margin: 80px auto;
-            padding: 0 20px;
+            margin-bottom: 40px;
         }
 
         .section-title {
             text-align: center;
             font-size: 36px;
             color: white;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .menu-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
         .menu-card {
             background: white;
             border-radius: 15px;
-            overflow: hidden;
+            padding: 25px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
+            transition: transform 0.3s;
         }
 
         .menu-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
         }
 
         .menu-card-icon {
-            font-size: 60px;
-            height: 150px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-size: 50px;
+            margin-bottom: 10px;
         }
 
-        .menu-card-content {
-            padding: 20px;
-        }
-
-        .menu-card-content h3 {
-            font-size: 20px;
+        .menu-card h3 {
+            font-size: 18px;
             margin-bottom: 10px;
             color: #333;
         }
 
-        .menu-card-content p {
+        .menu-card p {
             color: #666;
-            line-height: 1.6;
-            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 10px;
         }
 
         .price {
-            font-size: 18px;
             color: #667eea;
             font-weight: bold;
-            margin-top: 15px;
+            font-size: 16px;
         }
 
         .skills-section {
             background: white;
-            padding: 60px 20px;
-            margin: 80px 0;
-        }
-
-        .skills-container {
-            max-width: 1200px;
-            margin: 0 auto;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
         }
 
         .skill-item {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .skill-name {
             font-weight: bold;
             margin-bottom: 8px;
-            color: #333;
         }
 
         .skill-bar {
@@ -232,9 +187,7 @@
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 12px;
             font-weight: bold;
-            transition: width 0.5s ease;
         }
 
         footer {
@@ -242,205 +195,87 @@
             color: white;
             text-align: center;
             padding: 30px 20px;
-            margin-top: 80px;
-        }
-
-        .social-links {
-            margin: 20px 0;
-        }
-
-        .social-links a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background: #667eea;
-            border-radius: 50%;
-            margin: 0 10px;
-            line-height: 40px;
-            color: white;
-            text-decoration: none;
-            transition: transform 0.3s;
-        }
-
-        .social-links a:hover {
-            transform: scale(1.2);
+            border-radius: 15px;
         }
 
         @media (max-width: 768px) {
             .hero {
                 grid-template-columns: 1fr;
             }
-
-            .hero-content h1 {
-                font-size: 36px;
-            }
-
-            nav ul {
-                gap: 15px;
-                font-size: 14px;
+            .hero-text h1 {
+                font-size: 32px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">🍳 Shaneen 的魔法厨房</div>
-            <ul>
-                <li><a href="#home">首页</a></li>
-                <li><a href="#menu">菜单</a></li>
-                <li><a href="#skills">技能</a></li>
-                <li><a href="#contact">联系</a></li>
-            </ul>
-        </nav>
+        <div class="logo">🍳 Shaneen 的魔法厨房</div>
     </header>
 
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>👨‍🍳 欢迎来到我的厨房！</h1>
-            <p>我是 Shaneen，一位用代码烹饪美食的天才厨师。每一道菜都是 Bug Free 的，每一个食谱都经过 Unit Test！</p>
-            <p>🔥 专门烹饪：Bug 级别的麻辣火锅、架构师级别的红烧肉、以及 DevOps 级别的黑暗料理</p>
-            <button class="btn" onclick="alert('📞 电话：+86 1314-520-1314\n📧 邮箱：shaneen@magickitchen.com\n🍽️ 营业时间：24/7（因为我从不睡觉）')">📞 预约我的服务</button>
-        </div>
-        <div class="hero-image">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600">
-                <!-- Chef Hat -->
-                <ellipse cx="200" cy="60" rx="90" ry="50" fill="#f5f5f5"/>
-                <path d="M 120 60 Q 120 20 200 10 Q 280 20 280 60" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
-                
-                <!-- Head -->
-                <circle cx="200" cy="180" r="70" fill="#d4a574"/>
-                
-                <!-- Hair -->
-                <path d="M 135 140 Q 130 100 200 95 Q 270 100 265 140" fill="#3d2817"/>
-                
-                <!-- Ears -->
-                <ellipse cx="135" cy="180" rx="18" ry="25" fill="#d4a574"/>
-                <ellipse cx="265" cy="180" rx="18" ry="25" fill="#d4a574"/>
-                
-                <!-- Glasses Frame Left -->
-                <rect x="130" y="165" width="45" height="35" rx="8" fill="none" stroke="#333" stroke-width="3"/>
-                <circle cx="153" cy="182" r="3" fill="#667eea" opacity="0.4"/>
-                
-                <!-- Glasses Bridge -->
-                <line x1="175" y1="182" x2="225" y2="182" stroke="#333" stroke-width="3"/>
-                
-                <!-- Glasses Frame Right -->
-                <rect x="225" y="165" width="45" height="35" rx="8" fill="none" stroke="#333" stroke-width="3"/>
-                <circle cx="248" cy="182" r="3" fill="#667eea" opacity="0.4"/>
-                
-                <!-- Eyes -->
-                <circle cx="153" cy="180" r="6" fill="#1a1a1a"/>
-                <circle cx="248" cy="180" r="6" fill="#1a1a1a"/>
-                <circle cx="154" cy="178" r="2" fill="white"/>
-                <circle cx="249" cy="178" r="2" fill="white"/>
-                
-                <!-- Nose -->
-                <path d="M 200 185 L 200 210" stroke="#b8956a" stroke-width="2"/>
-                
-                <!-- Mouth -->
-                <path d="M 180 225 Q 200 235 220 225" fill="none" stroke="#c97a7a" stroke-width="2" stroke-linecap="round"/>
-                
-                <!-- Chef Coat -->
-                <path d="M 130 250 L 100 350 Q 100 380 130 380 L 270 380 Q 300 380 300 350 L 270 250" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
-                
-                <!-- Coat Buttons -->
-                <circle cx="160" cy="290" r="6" fill="#333"/>
-                <circle cx="160" cy="330" r="6" fill="#333"/>
-                <circle cx="240" cy="290" r="6" fill="#333"/>
-                <circle cx="240" cy="330" r="6" fill="#333"/>
-                
-                <!-- Left Arm -->
-                <ellipse cx="100" cy="300" rx="25" ry="50" fill="#d4a574" transform="rotate(-20 100 300)"/>
-                <ellipse cx="70" cy="350" rx="20" ry="35" fill="#d4a574" transform="rotate(-30 70 350)"/>
-                
-                <!-- Right Arm with Magnifying Glass -->
-                <ellipse cx="300" cy="310" rx="25" ry="55" fill="#d4a574" transform="rotate(25 300 310)"/>
-                <ellipse cx="335" cy="365" rx="20" ry="35" fill="#d4a574" transform="rotate(35 335 365)"/>
-                
-                <!-- Magnifying Glass Handle -->
-                <rect x="325" y="330" width="15" height="60" rx="7" fill="#a0826d"/>
-                
-                <!-- Magnifying Glass Circle -->
-                <circle cx="355" cy="270" r="45" fill="none" stroke="#a0826d" stroke-width="8"/>
-                <circle cx="355" cy="270" r="40" fill="none" stroke="#f0f0f0" stroke-width="2" opacity="0.5"/>
-                
-                <!-- Glass Shine -->
-                <circle cx="340" cy="255" r="12" fill="rgba(255,255,255,0.3)"/>
-                
-                <!-- Legs -->
-                <rect x="170" y="380" width="20" height="80" fill="#333"/>
-                <rect x="210" y="380" width="20" height="80" fill="#333"/>
-                
-                <!-- Shoes -->
-                <ellipse cx="180" cy="470" rx="18" ry="15" fill="#1a1a1a"/>
-                <ellipse cx="220" cy="470" rx="18" ry="15" fill="#1a1a1a"/>
-            </svg>
-        </div>
-    </section>
+    <div class="container">
+        <section class="hero">
+            <div class="hero-text">
+                <h1>欢迎来到我的魔法厨房！</h1>
+                <p>我是 Shaneen，一位用代码烹饪美食的天才厨师。</p>
+                <p>每一道菜都是 Bug Free 的，每一个食谱都经过 Unit Test！</p>
+                <p>🔥 专门烹饪：Bug 级别的麻辣火锅、架构师级别的红烧肉、以及 DevOps 级别的黑暗料理</p>
+                <button class="btn" onclick="alert('📞 电话：+86 1314-520-1314\n📧 邮箱：shaneen@magickitchen.com\n🍽️ 营业时间：24/7')">📞 预约我的服务</button>
+            </div>
+            <div class="hero-image">
+                <img src="chef.png" alt="Shaneen Chef" style="max-width: 100%; height: auto;">
+            </div>
+        </section>
 
-    <section class="menu-section" id="menu">
-        <h2 class="section-title">🍽️ 今日特色菜单</h2>
-        <div class="menu-grid">
-            <div class="menu-card">
-                <div class="menu-card-icon">🐛</div>
-                <div class="menu-card-content">
+        <section class="menu-section">
+            <h2 class="section-title">🍽️ 今日特色菜单</h2>
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <div class="menu-card-icon">🐛</div>
                     <h3>Debug 麻辣火锅</h3>
-                    <p>用真实的 Bug 作为食材，越辣越能帮你思考。每一口都会让你发现一个问题。</p>
+                    <p>用真实的 Bug 作为食材，越辣越能帮你思考。</p>
                     <div class="price">¥999 / 次</div>
                 </div>
-            </div>
 
-            <div class="menu-card">
-                <div class="menu-card-icon">🏗️</div>
-                <div class="menu-card-content">
+                <div class="menu-card">
+                    <div class="menu-card-icon">🏗️</div>
                     <h3>架构师红烧肉</h3>
-                    <p>分层烹饪，设计精妙。一口咬下去，你会感受到 MVC、MVP、MVVM 的完美结合。</p>
+                    <p>分层烹饪，设计精妙。感受 MVC 的完美结合。</p>
                     <div class="price">¥1888 / 份</div>
                 </div>
-            </div>
 
-            <div class="menu-card">
-                <div class="menu-card-icon">⚡</div>
-                <div class="menu-card-content">
+                <div class="menu-card">
+                    <div class="menu-card-icon">⚡</div>
                     <h3>DevOps 黑暗料理</h3>
-                    <p>CI/CD 流程自动烹饪，一键部署到你的胃。出错了自动回滚。</p>
+                    <p>CI/CD 流程自动烹饪，一键部署到你的胃。</p>
                     <div class="price">¥666 / 盘</div>
                 </div>
-            </div>
 
-            <div class="menu-card">
-                <div class="menu-card-icon">🤖</div>
-                <div class="menu-card-content">
+                <div class="menu-card">
+                    <div class="menu-card-icon">🤖</div>
                     <h3>AI 智能面条</h3>
-                    <p>机器学习生成的面条配方。每次做都不一样，就像我的代码一样不可预测。</p>
+                    <p>机器学习生成的面条配方。每次做都不一样。</p>
                     <div class="price">¥520 / 碗</div>
                 </div>
-            </div>
 
-            <div class="menu-card">
-                <div class="menu-card-icon">☁️</div>
-                <div class="menu-card-content">
+                <div class="menu-card">
+                    <div class="menu-card-icon">☁️</div>
                     <h3>云原生汤</h3>
-                    <p>用微服务架构做的汤。可以独立调整每一个食材的温度和咸淡度。</p>
+                    <p>用微服务架构做的汤。独立调整每个食材。</p>
                     <div class="price">¥888 / 锅</div>
                 </div>
-            </div>
 
-            <div class="menu-card">
-                <div class="menu-card-icon">🎂</div>
-                <div class="menu-card-content">
+                <div class="menu-card">
+                    <div class="menu-card-icon">🎂</div>
                     <h3>Git Commit 蛋糕</h3>
-                    <p>每一层代表一个提交，如果做错了可以用 rebase 重新堆砌。味道时好时坏。</p>
+                    <p>每一层代表一个提交，可以用 rebase 重新堆砌。</p>
                     <div class="price">¥888 / 个</div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="skills-section" id="skills">
-        <div class="skills-container">
-            <h2 class="section-title" style="color: #333; text-shadow: none;">👨‍🍳 我的超能力</h2>
+        <section class="skills-section">
+            <h2 class="section-title" style="color: #333;">👨‍🍳 我的超能力</h2>
             
             <div class="skill-item">
                 <div class="skill-name">🍲 煮饭技能</div>
@@ -483,45 +318,16 @@
                     <div class="skill-progress" style="width: 45%;">45%</div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer id="contact">
-        <h3>🍽️ 联系我的魔法厨房</h3>
-        <p>📍 地址：GitHub Cloud · 互联网 · 虚拟空间</p>
-        <p>📞 电话：+86 1314-520-1314</p>
-        <p>📧 邮箱：<a href="mailto:shaneen@magickitchen.com" style="color: #667eea;">shaneen@magickitchen.com</a></p>
-        <div class="social-links">
-            <a href="#" title="GitHub">💻</a>
-            <a href="#" title="Twitter">🐦</a>
-            <a href="#" title="LinkedIn">💼</a>
-            <a href="#" title="Instagram">📸</a>
-        </div>
-        <p style="margin-top: 20px; font-size: 12px; opacity: 0.7;">⚠️ 免责声明：所有菜单仅供娱乐，不会真的用 Bug 做菜。（也许吧）</p>
-        <p style="margin-top: 10px;">© 2026 Shaneen 的魔法厨房 | 代码即烹饪，烹饪即艺术</p>
-    </footer>
-
-    <script>
-        // 滚动动画
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
-        // 技能条动画
-        window.addEventListener('scroll', () => {
-            document.querySelectorAll('.skill-progress').forEach(bar => {
-                const rect = bar.getBoundingClientRect();
-                if (rect.top < window.innerHeight) {
-                    bar.style.animation = 'none';
-                }
-            });
-        });
-    </script>
+        <footer>
+            <h3>🍽️ 联系我的魔法厨房</h3>
+            <p>📍 地址：GitHub Cloud · 互联网 · 虚拟空间</p>
+            <p>📞 电话：+86 1314-520-1314</p>
+            <p>📧 邮箱：shaneen@magickitchen.com</p>
+            <p style="margin-top: 20px; font-size: 12px; opacity: 0.7;">⚠️ 免责声明：所有菜单仅供娱乐</p>
+            <p style="margin-top: 10px;">© 2026 Shaneen 的魔法厨房 | 代码即烹饪，烹饪即艺术</p>
+        </footer>
+    </div>
 </body>
 </html>
